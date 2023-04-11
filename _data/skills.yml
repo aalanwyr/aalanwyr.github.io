@@ -1,0 +1,10 @@
+- name: Graphic Software Engineer
+  keywords:
+      - C
+      - C++
+      - KMD/UMD
+
+- name: AI Performance Engineer
+  keywords:
+      - Profile AI workload (AI framework / kerenl)
+      - OneAPI (LevelZero / OpenCL/ OneDnn)
