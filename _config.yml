@@ -161,6 +161,7 @@ beaudar:
     repo: aalanwyr/blog-comments
 # giscus 配置参考：https://giscus.app/zh-CN
 giscus:
+    src: https://giscus.app/client.js
     repo: aalanwyr/aalanwyr.github.io
     repo-id: R_kgDOHaklMQ
     category: Announcements
