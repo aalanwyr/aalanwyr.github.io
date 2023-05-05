@@ -18,14 +18,14 @@ TensorRT 会对输入的 ONNX 原始模型文件构建生成 TRT engine，然后
 大概长这样，以 Resnet50 为例。左图是 ONNX 输入模型， 右图是 TRT engine 模型结构。
 
 <center class="half">
-<img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5d10e66113f04072a152f28007cef149~tplv-k3u1fbpfcp-watermark.image?" width="30%">
-<img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/98eee6363751455e82964971e06cd14c~tplv-k3u1fbpfcp-watermark.image?" width="65%">
+<img src="https://raw.githubusercontent.com/aalanwyr/aalanwyr.github.io/main/images/posts/TensorRT/1.png" width="30%">
+<img src="https://raw.githubusercontent.com/aalanwyr/aalanwyr.github.io/main/images/posts/TensorRT/2.png" width="60%">
 </center>
 
 可以看到很多层被融合了，*Conv + BatchNormalization + Relu = Convolution*
 
 # 使用  trt-engine-explorer 绘制模型
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1dfd10d6fe67452b994d622fc7263ef5~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](https://raw.githubusercontent.com/aalanwyr/AI-profiling/master/TensorRT/trt-engine-explorer/images/trex.png)
 ## 1. 获取 trt-engine-explorer
 trt-engine-explorer 是 TensorRT 下的一个工具包。
 ```
@@ -72,4 +72,4 @@ trtexec --onnx=ResNet50.onnx --iterations=500 --workspace=1024 --percentile=99 -
 ```
 ### 如果只需要 engine 网络结构， 只看 Graph Rendering 这一部分即可。  
   
-![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/012031f823c74d008015467715bd111c~tplv-k3u1fbpfcp-watermark.image?)
+![image.png](https://raw.githubusercontent.com/aalanwyr/aalanwyr.github.io/main/images/posts/TensorRT/3.png)
